@@ -1,3 +1,30 @@
+const header = document.getElementById("header");
+
+let lastScrollY = window.scrollY;
+
+window.addEventListener("scroll", ()=>{
+
+    if(Math.abs(window.scrollY - lastScrollY) < 50){
+        return;
+    }
+    else if(window.scrollY > lastScrollY){
+        header.style.top = "-100px";
+    }
+    else{
+        header.style.top = "0";
+    }
+
+    lastScrollY = window.scrollY;
+});
+
+
+//back to top / home page
+const logobtn = document.getElementById("logo");
+
+logobtn.addEventListener("click", ()=>{
+    window.scrollTo({top: 0, behavior: "smooth"});
+});
+
 const hamburger = document.getElementById("hamburger");
 const sideBarContainer = document.getElementById("sideBarContainer");
 const sideBar = document.getElementById("sideBar");
