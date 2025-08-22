@@ -23,6 +23,8 @@ const logobtn = document.getElementById("logo");
 
 logobtn.addEventListener("click", ()=>{
     window.scrollTo({top: 0, behavior: "smooth"});
+    homepage.classList.remove("displayhidden");
+    subsection.classList.add("noview");
 });
 
 const hamburger = document.getElementById("hamburger");
@@ -93,3 +95,20 @@ menuDrop.forEach(drop =>{
     })
     
 });
+
+//subsection
+const homepage = document.getElementById("homepage");
+const subsection = document.getElementById("subsection");
+menuDrop.forEach(li =>{
+    li.addEventListener("click", e =>{
+        homepage.classList.add("displayhidden");
+       subsection.classList.remove("noview");
+    });
+})
+const breeds = {
+    chihuahua :{
+        title: "Chihuahua",
+        image: "./images/chihuahuaimg.jpg",
+        description: "lorem lorem lorem"
+    }
+}
