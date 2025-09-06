@@ -27,6 +27,7 @@ logobtn.addEventListener("click", ()=>{
     subsection.classList.add("noview");
 });
 
+//hamburger action
 const hamburger = document.getElementById("hamburger");
 const sideBarContainer = document.getElementById("sideBarContainer");
 const sideBar = document.getElementById("sideBar");
@@ -99,16 +100,62 @@ menuDrop.forEach(drop =>{
 //subsection
 const homepage = document.getElementById("homepage");
 const subsection = document.getElementById("subsection");
-menuDrop.forEach(li =>{
-    li.addEventListener("click", e =>{
-        homepage.classList.add("displayhidden");
-       subsection.classList.remove("noview");
-    });
-})
+
 const breeds = {
-    chihuahua :{
+    Chihuahua :{
         title: "Chihuahua",
         image: "./images/chihuahuaimg.jpg",
-        description: "lorem lorem lorem"
+        image2:"./images/Chihuahuaimage2.avif",
+        description: "lorem lorem lorem",
+        //change the youtube link so have /embed/ then put the video id
+        video: "https://www.youtube.com/embed/bgw55YuLVvM"
     }
 }
+
+menuDrop.forEach(li =>{
+    li.addEventListener("click", e =>{
+        hamburger.classList.toggle("active");
+        sideBar.classList.toggle("active");
+        sideBarContainer.classList.toggle("hidden");
+        document.body.style.overflow = "";
+        //remove the arrow rotate and the drop down 
+        listName.forEach(liname =>{
+            const menuList = liname.parentElement;
+            const dropdown = menuList.querySelector(".menuDrop");
+            const arrow = menuList.querySelector(".material-symbols-outlined");
+
+        document.querySelectorAll(".menuDrop").forEach(other =>{
+            if (other !== dropdown){
+                other.classList.remove("drop-down");
+            }
+        });
+
+        document.querySelectorAll(".material-symbols-outlined").forEach(other =>{
+            if(other !== arrow){
+                other.classList.remove("rotate");
+            }
+        });
+        });
+
+        //lets the target id name become the class select and gets all the 
+        //information needed from the class to display on screen
+        
+        let clickedli = e.target.id;
+        const setTitle = document.getElementById("subsection-header")
+        const setimage1 = document.getElementById("subsection-image");
+        const setimage2 = document.getElementById("subsection-image2");
+        const settext = document.getElementById("subsection-text");
+        const videocontainer = document.getElementById("videobox");
+
+        homepage.classList.add("displayhidden");
+        subsection.classList.remove("noview");
+        
+        let key = breeds[clickedli];
+        setTitle.textContent = key.title;
+        setimage1.src = key.image;
+        setimage2.src = key.image2;
+        settext.textContent = key.description;
+        videocontainer.src = key.video;
+        window.scrollTo({top:0, behavior:"smooth"});
+    });
+})

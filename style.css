@@ -401,12 +401,48 @@ body{
 
 #subsection{
     display: flex;
+    flex-direction: column;
     color:white;
     background-color: black;
+    text-align: center;
+    min-height: 100vh;
 }
+
+#subsection-container1{
+    background-color:blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding-block: 80px;
+}
+
+#subsection-container2{
+    display: flex;
+    padding-block: 80px;
+    justify-content: space-around;
+    align-items: center;
+    background-color: red;
+    flex-wrap: wrap;
+}
+
+#video-container{
+    padding-block: 80px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 #subsection.noview{
     display:none;
+}
+
+#subsection-image{
+    height: 360px;
+    width: 600px;
 }
 
 
