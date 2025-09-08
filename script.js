@@ -106,9 +106,17 @@ const breeds = {
         title: "Chihuahua",
         image: "./images/chihuahuaimg.jpg",
         image2:"./images/Chihuahuaimage2.avif",
-        description: "Chihuahuas are one of the smallest dog breeds. The chihuahua is believed to originate from Mexico. The breed also has its bad rumors because it is know as agressive but that not the case. Chihuahuas are a friendly breed and are very loyal. Fun fact Aztecs nobles would have a lot of chihuahuas as they were believed to guide them in the after life.",
+        description: "Chihuahuas are one of the smallest dog breeds. The chihuahua is believed to originate from Mexico and is seen as a national symbol. The breed also has its bad rumors because it is know as agressive and has a big dog attiitude but that not the case. Chihuahuas are a friendly breed and are very loyal. Fun fact Aztecs nobles would have a lot of chihuahuas as they were believed to guide them in the after life.",
         //change the youtube link so have /embed/ then put the video id
         video: "https://www.youtube.com/embed/bgw55YuLVvM"
+    },
+
+    GR:{
+        title:"Golden Retreiver",
+        image: "./images/Golden1.webp",
+        image2: "./images/Golden2.jpg",
+        description: "The Golden Retriever is a very popular dog breed and its almost iconic. It is known for its bright golden coat but it can also have a darker gold or even a black coat. The Golden Retriever are decendants of some Russian circus dogs. They were primarly used to hunt deer and retrieve game, like birds after being shot out the sky. ",
+        video: "https://www.youtube.com/embed/hdXzvEgTuZQ"
     }
 }
 
