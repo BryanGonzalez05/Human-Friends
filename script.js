@@ -106,7 +106,7 @@ const breeds = {
         title: "Chihuahua",
         image: "./images/chihuahuaimg.jpg",
         image2:"./images/Chihuahuaimage2.avif",
-        description: "lorem lorem lorem",
+        description: "Chihuahuas are one of the smallest dog breeds. The chihuahua is believed to originate from Mexico. The breed also has its bad rumors because it is know as agressive but that not the case. Chihuahuas are a friendly breed and are very loyal. Fun fact Aztecs nobles would have a lot of chihuahuas as they were believed to guide them in the after life.",
         //change the youtube link so have /embed/ then put the video id
         video: "https://www.youtube.com/embed/bgw55YuLVvM"
     }
